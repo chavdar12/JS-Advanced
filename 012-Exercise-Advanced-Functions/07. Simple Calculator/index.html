@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body onload="calculator()">
+<div class="container">
+    <h1 class="title">Simple Calculator</h1>
+    <p>Enter two numbers</p><br>
+    <div class="input">
+        <label for="num1">Number One</label> <br>
+        <input id="num1" type="text"> <br>
+        <label for="num2">Number Two</label> <br>
+        <input id="num2" type="text"> <br>
+        <hr>
+        <label for="result">Result</label> <br>
+        <input id="result" readonly type="text"/><br>
+    </div>
+    <br>
+    <button id="sumButton" onclick="calculate.add()">Sum</button>
+    <button id="subtractButton" onclick="calculate.subtract()">Subtract</button>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>

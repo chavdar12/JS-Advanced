@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const sortArray = require('./01.sortArray');
 const argumentInfo = require('./02.argumentInfo');

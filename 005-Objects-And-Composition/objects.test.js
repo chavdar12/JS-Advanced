@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const cityRecord = require('./01.cityRecord');
 const townPopulation = require('./02.townPopulation');

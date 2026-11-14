@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const Rectangle = require('./01.rectangle');
 const Request = require('./02.dataClass');

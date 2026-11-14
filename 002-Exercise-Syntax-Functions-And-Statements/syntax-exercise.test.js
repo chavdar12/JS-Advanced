@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const fruit = require('./01.fruit');
 const greatestCommonDivisor = require('./02.greatestCommonDivisor');

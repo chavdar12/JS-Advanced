@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const subSum = require('./01.subSum');
 const createCard = require('./02.playingCards');

@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const echo = require('./01.echoFunction');
 const stringLength = require('./02.stringLength');

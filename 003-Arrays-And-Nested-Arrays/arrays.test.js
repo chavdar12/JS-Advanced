@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const evenPositionElement = require('./01.evenPositionElement');
 const lastKNumbersSequence = require('./02.lastKNumbersSequence');

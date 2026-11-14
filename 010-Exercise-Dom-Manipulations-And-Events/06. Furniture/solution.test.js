@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe('Furniture', () => {
     it('generates rows from JSON and buys the checked ones', async () => {

@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe('Table - Search Engine', () => {
     it('selects matching rows case-insensitively and clears the field', async () => {

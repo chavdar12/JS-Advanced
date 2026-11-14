@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe("Hell's Kitchen", () => {
     it('picks the restaurant with the best average salary', async () => {

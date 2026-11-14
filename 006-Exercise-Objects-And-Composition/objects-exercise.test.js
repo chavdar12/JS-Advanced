@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const calorieObject = require('./01.calorieObject');
 const constructionCrew = require('./02.constructionCrew');

@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const printArrayWithDelimiter = require('./01.printArrayWithDelimiter');
 const printEveryNthElement = require('./02.printEveryNthElement');

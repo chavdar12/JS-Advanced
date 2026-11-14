@@ -1,0 +1,11 @@
+{
+  "name": "016-exercise-classes",
+  "private": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^6.3.0",
+    "mocha": "^12.0.3"
+  }
+}

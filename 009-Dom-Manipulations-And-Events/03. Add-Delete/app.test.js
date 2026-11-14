@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe('Add / Delete', () => {
     it('adds an item with a working [Delete] link', async () => {

@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 // 01 and 02 patch built-in prototypes when loaded, as the tasks require.
 require('./01.arrayExtension');

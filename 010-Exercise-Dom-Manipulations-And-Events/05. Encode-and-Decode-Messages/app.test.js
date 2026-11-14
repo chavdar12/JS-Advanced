@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe('Encode and Decode Messages', () => {
     it('shifts char codes by one each way', async () => {

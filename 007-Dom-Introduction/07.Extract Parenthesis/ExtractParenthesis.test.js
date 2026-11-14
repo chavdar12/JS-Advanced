@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../test/dom');
+const { loadPage } = require('../test-helpers/dom');
 
 describe('Extract Parenthesis', () => {
     it('returns the text inside parentheses joined by "; "', async () => {

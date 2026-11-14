@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { captureLog } = require('../test/console');
+const { captureLog } = require('./test-helpers/console');
 
 const areaAndVolume = require('./01.areaAndVolumeCalculator');
 const add = require('./02.add');

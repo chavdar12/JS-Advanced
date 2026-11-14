@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const path = require('path');
-const { loadPage } = require('../../../test/dom');
+const { loadPage } = require('../../test-helpers/dom');
 
 describe('Dynamic Validation (DomErrors)', () => {
     it('marks invalid emails with the error class', async () => {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts Builder</title>
+    <style>
+        article { width: 300px; border: 1px solid #ccc; margin: 0.5em; font-family: sans-serif; }
+        .title { padding: 0.5em; background: #ddd; }
+        .title.online { background: #9f9; }
+        .title button { float: right; }
+        .info span { display: block; padding: 0.25em 0.5em; }
+    </style>
+    <script src="contacts.js"></script>
+</head>
+<body>
+<main id="main"></main>
+<script>
+    let contacts = [
+        new Contact('Ivan', 'Ivanov', '0888 123 456', 'i.ivanov@gmail.com'),
+        new Contact('Maria', 'Petrova', '0899 987 654', 'mar4eto@abv.bg'),
+        new Contact('Jordan', 'Kirov', '0988 456 789', 'jordk@gmail.com'),
+    ];
+    contacts.forEach((c) => c.render('main'));
+    setTimeout(() => contacts[1].online = true, 2000);
+</script>
+</body>
+</html>

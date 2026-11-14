@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Model</title>
+    <script src="textbox.js"></script>
+</head>
+<body>
+<input type="text" class="textbox">
+<input type="text" class="textbox">
+<input type="text" class="textbox">
+<input type="text" class="textbox">
+<script>
+    let textbox = new Textbox('.textbox', /[^a-zA-Z0-9]/);
+    let inputs = document.getElementsByClassName('textbox');
+    inputs[0].addEventListener('click', () => console.log(textbox.value));
+</script>
+</body>
+</html>

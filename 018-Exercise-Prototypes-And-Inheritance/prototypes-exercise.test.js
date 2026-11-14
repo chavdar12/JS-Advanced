@@ -8,6 +8,7 @@ const extensibleObject = require('./03.extensibleObject');
 const balloons = require('./04.balloons');
 const people = require('./05.people');
 const posts = require('./06.posts');
+const createComputerHierarchy = require('./07.computer');
 
 describe('Prototypes and Inheritance - Exercise', () => {
     it('01. Array Extension', () => {
@@ -92,5 +93,26 @@ describe('Prototypes and Inheritance - Exercise', () => {
 
         const blog = new BlogPost('Blog', 'Text', 10);
         expect(String(blog.view().view())).to.equal('Post: Blog\nContent: Text\nViews: 12');
+    });
+
+    it('07. Computer', () => {
+        const { Battery, Keyboard, Monitor, Computer, Laptop, Desktop } = createComputerHierarchy();
+        const battery = new Battery('Energy', 3);
+        expect({ ...battery }).to.deep.equal({ manufacturer: 'Energy', expectedLife: 3 });
+
+        const laptop = new Laptop('Hewlett Packard', 2.4, 4, 0.5, 3.12, 'Silver', battery);
+        expect(laptop).to.deep.include({
+            manufacturer: 'Hewlett Packard', processorSpeed: 2.4, ram: 4, hardDiskSpace: 0.5, weight: 3.12, color: 'Silver',
+        });
+        expect(laptop.battery).to.equal(battery);
+        expect(laptop).to.be.instanceOf(Computer);
+
+        const desktop = new Desktop('Dell', 3.3, 8, 1, new Keyboard('Logitech', 1.5), new Monitor('Benq', 1920, 1080));
+        expect(desktop.monitor.width).to.equal(1920);
+
+        expect(() => new Computer('X', 1, 1, 1)).to.throw(Error);
+        expect(() => new Laptop('X', 1, 1, 1, 1, 'Red', {})).to.throw(TypeError);
+        expect(() => { desktop.keyboard = battery; }).to.throw(TypeError);
+        expect(() => { desktop.monitor = null; }).to.throw(TypeError);
     });
 });

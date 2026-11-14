@@ -11,6 +11,7 @@ const townsToJSON = require('./07.townsToJSON');
 const rectangle = require('./08.rectangle');
 const createSortedList = require('./09.sortedList');
 const heroes = require('./10.heroes');
+const jansNotation = require('./11.jansNotation');
 
 describe('Objects and Composition - Exercise', () => {
     it('01. Calorie Object', () => {
@@ -106,5 +107,12 @@ describe('Objects and Composition - Exercise', () => {
             fighter.fight();
         })).to.deep.equal(['Gandalf cast fireball', 'Aragorn slashes at the foe!']);
         expect([mage.mana, fighter.stamina, mage.health]).to.deep.equal([99, 99, 100]);
+    });
+
+    it("11. Jan's Notation", () => {
+        expect(captureLog(() => jansNotation([3, 4, '+']))).to.deep.equal(['7']);
+        expect(captureLog(() => jansNotation([5, 3, 4, '*', '-']))).to.deep.equal(['-7']);
+        expect(captureLog(() => jansNotation([7, 33, 8, '-']))).to.deep.equal(['Error: too many operands!']);
+        expect(captureLog(() => jansNotation([15, '/']))).to.deep.equal(['Error: not enough operands!']);
     });
 });

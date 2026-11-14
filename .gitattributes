@@ -1,0 +1,20 @@
+# Normalize line endings; keep LF in the repo and working tree on every OS.
+* text=auto eol=lf
+
+*.js   text
+*.json text
+*.html text
+*.css  text
+*.md   text
+*.yml  text
+
+# Lockfiles: no diff noise, merge as a unit.
+package-lock.json -diff linguist-generated=true
+
+# Binary assets.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary

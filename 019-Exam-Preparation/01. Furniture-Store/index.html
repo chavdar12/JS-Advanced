@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture Store</title>
+    <!-- Minimal skeleton recreated from the task description (the original was not provided). -->
+</head>
+<body>
+<form>
+    <input id="model" type="text" placeholder="Model">
+    <input id="year" type="number" placeholder="Year">
+    <textarea id="description" placeholder="Description"></textarea>
+    <input id="price" type="number" placeholder="Price">
+    <button id="add" type="submit">Add</button>
+</form>
+<table>
+    <thead>
+    <tr><th>Model</th><th>Price</th><th>Actions</th></tr>
+    </thead>
+    <tbody id="furniture-list"></tbody>
+    <tfoot>
+    <tr><td>Total Profit</td><td class="total-price">0.00</td></tr>
+    </tfoot>
+</table>
+<script src="app.js"></script>
+</body>
+</html>
